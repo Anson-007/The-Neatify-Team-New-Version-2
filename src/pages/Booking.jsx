@@ -101,6 +101,8 @@ export default function Booking({ user }) {
     return selectedServices.some(s => s.service_type?.toLowerCase() === "deep cleaning");
   }, [selectedServices]);
 
+  console.log(isDeepCleaning);
+
   const fetchFreshData = useCallback(async () => {
     // Only run if we actually have services to check
     setSelectedServices((currentServices) => {
